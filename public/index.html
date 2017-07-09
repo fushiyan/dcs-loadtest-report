@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color:#4CAF50;
+        }
+        .btn-group button {
+            background-color: #4CAF50; /* Green background */
+            border: 1px solid green; /* Green border */
+            color: white; /* White text */
+            padding: 10px 24px; /* Some padding */
+            cursor: pointer; /* Pointer/hand icon */
+            float: left; /* Float the buttons side by side */
+        }
+
+        .btn-group button:not(:last-child) {
+            border-right: none; /* Prevent double borders */
+        }
+
+        /* Clear floats (clearfix hack) */
+        .btn-group:after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Add a background color on hover */
+        .btn-group button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><a class="active"  href="index.html">index</a></li>
+    <li><a href="jmeter.html">JMeter Test Result</a></li>
+    <li><a href="pod.html">Pod Status</a></li>
+    <li><a href="host.html">Host Node Status</a></li>
+    <li><a href="merged.html">Merge PDF files into one </a></li>
+    <li><a href="confirm.html">Send Repory By Email</a></li>
+
+</ul>
+<h1>Load Test Report</h1>
+<form method="post" action="/">
+    Start
+    <input type="text" name="start">
+    End
+    <input type="text" name="end">
+    <input type="submit" value="Generate PDF Report">
+</form>
+<iframe src="executive.html" width="1000" height="560"></iframe>
+</body>
+</html>
